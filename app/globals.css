@@ -7,14 +7,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 1320px;
+  /* height: 1320px; */
 }
 
 .side-panel {
   display: flex;
   flex-direction: column;
   max-width: 315px;
-  height: 1500px;
+  /* height: 1500px; */
   background-color: whitesmoke;
 }
 
@@ -126,4 +126,24 @@ p {
 .responsibilities {
   margin-top: 4px;
   margin-left: 24px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .page {
+    display: block;
+  }
+
+  .side-panel {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: whitesmoke;
+  }
+
+  .main-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    background-color: white;
+  }
 }
