@@ -1,3 +1,5 @@
+"use client";
+
 import { FC } from "react";
 import Awards from "./components/sections/Awards";
 import CareerObjective from "./components/sections/CareerObjective";
@@ -7,6 +9,10 @@ import Skills from "./components/sections/Skills";
 import WorkExperience from "./components/sections/WorkExperience/WorkExperience";
 
 const Resume: FC = () => {
+  const handleClick = () => {
+    window.print();
+  };
+
   return (
     <main className="page">
       <div className="side-panel">
@@ -18,6 +24,11 @@ const Resume: FC = () => {
       <div className="main-panel">
         <CareerObjective />
         <WorkExperience />
+      </div>
+      <div className="noPrint">
+        <button className="button" onClick={handleClick}>
+          Print
+        </button>
       </div>
     </main>
   );
